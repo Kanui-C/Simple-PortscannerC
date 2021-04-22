@@ -13,9 +13,8 @@ char *get_ip(char *host)
 
     ip = gethostbyname(host);
     if(ip == NULL)
-    {
         printf("[INFO] Endereço nao encontrado!");
-    }
+    
     return inet_ntoa(*((struct in_addr *)ip->h_addr_list[0]));
 }
 
